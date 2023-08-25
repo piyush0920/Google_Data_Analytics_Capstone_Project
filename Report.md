@@ -128,7 +128,7 @@ Created a csv file that we will visualize in Excel, Tableau, or my presentation 
 (N.B.: This file location is for a Mac. If you are working on a PC, change the file location accordingly (most likely "C:\Users\YOUR_USERNAME\Desktop\...") to export the data. You can read more here: https://datatofish.com/export-dataframe-to-csv-in-r/)
 
 
-#COMPLETED
+## COMPLETED
 
 I have also added the Rscript for detailed analysis.
 

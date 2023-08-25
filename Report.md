@@ -134,7 +134,7 @@ I have also added the Rscript for detailed analysis.
 
 ### Supporting visualizations and key findings
 
-![Click here to view](https://ibb.co/dccY1NW)
+![Click here to view](https://github.com/piyush0920/Google_Data_Analytics_Capstone_Project/blob/main/Dashboard%201.png)
 
 
 ### My top three recommendations based on your analysis

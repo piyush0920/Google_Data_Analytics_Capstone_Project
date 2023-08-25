@@ -133,12 +133,18 @@ all_trips_v2$day_of_week <- ordered(all_trips_v2$day_of_week, levels=c("Sunday",
 aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$day_of_week, FUN = mean)
 
 # analyze ridership data by type and weekday
-all_trips_v2 %>% 
+no_of_rides <- all_trips_v2 %>% 
   mutate(weekday = wday(started_at, label = TRUE)) %>%  #creates weekday field using wday()
   group_by(member_casual, weekday) %>%  #groups by usertype and weekday
   summarise(number_of_rides = n()							#calculates the number of rides and average duration 
             ,average_duration = mean(ride_length)) %>% 		# calculates the average duration
   arrange(member_casual, weekday)								# sorts
+
+# count type of bikes used by members and casual
+all_trips_v3 <- all_trips_v2 %>% 
+  group_by(rideable_type, member_casual) %>% 
+  summarise(count = n())
+all_trips_v3_pivot <- pivot_wider(all_trips_v3, names_from = rideable_type, values_from = count)
 
 
 # Let's visualize the number of rides by rider type
@@ -151,7 +157,7 @@ all_trips_v2 %>%
   ggplot(aes(x = weekday, y = number_of_rides, fill = member_casual)) +
   geom_col(position = "dodge")
 
-# There are eenormous no.of rides in above visual
+# There are enormous no.of rides in above visual
 # So let's create a visualization for average duration
 all_trips_v2 %>% 
   mutate(weekday = wday(started_at, label = TRUE)) %>% 
@@ -169,5 +175,7 @@ all_trips_v2 %>%
 # N.B.: This file location is for a Mac. If you are working on a PC, change the file location accordingly (most likely "C:\Users\YOUR_USERNAME\Desktop\...") to export the data. You can read more here: https://datatofish.com/export-dataframe-to-csv-in-r/
 counts <- aggregate(all_trips_v2$ride_length ~ all_trips_v2$member_casual + all_trips_v2$day_of_week, FUN = mean)
 write.csv(counts, file = "/Users/aspire/Downloads/Raw_csv_files/avg_ride_length.csv")
+write.csv(no_of_rides, file = "/Users/aspire/Downloads/Raw_csv_files/no_of_length.csv")
+
 
 #COMPLETED

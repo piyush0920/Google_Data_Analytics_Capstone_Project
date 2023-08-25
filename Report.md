@@ -51,12 +51,12 @@ Note: Excel is not suitable as the dataset contains more than than a single work
 
 Here is my Summary:
 
-### STEP 1: COLLECT DATA
+#### STEP 1: COLLECT DATA
 Upload Divvy datasets (csv files) into r.
 * By using "read_csv()" function.
 
 
-### STEP 2: WRANGLE DATA AND COMBINE INTO A SINGLE FILE
+#### STEP 2: WRANGLE DATA AND COMBINE INTO A SINGLE FILE
 Compared column names each of the files.
 (While the names don't have to be in the same order, they DO need to match perfectly before we can use a command to join them into one file)
 * By using "col_names()" function.
@@ -72,7 +72,7 @@ Stack individual month's data frames into one big data frame (data is from septe
 Removed lat, long fields as this data was dropped beginning in 2020
 
 
-### STEP 3: CLEAN UP AND ADD DATA TO PREPARE FOR ANALYSIS
+#### STEP 3: CLEAN UP AND ADD DATA TO PREPARE FOR ANALYSIS
 
 Inspected the new table that has been created
 * By using colnames() ,nrow(), dim() , head(). Also tail(), str(), summary().
@@ -101,7 +101,7 @@ Removed "bad" data
 This above command led to some NA values so we droped them.
 
 
-### STEP 4: CONDUCT DESCRIPTIVE ANALYSIS
+#### STEP 4: CONDUCT DESCRIPTIVE ANALYSIS
 
 Find Descriptive analysis on ride_length (all figures in seconds)
 
@@ -121,7 +121,7 @@ Analyzed ridership data by type and weekday
 
 So i created a visualization for average duration
 counting  how many electric, classic, docked bikes used by members and casual riders
-### STEP 5: EXPORT SUMMARY FILE FOR FURTHER ANALYSIS
+#### STEP 5: EXPORT SUMMARY FILE FOR FURTHER ANALYSIS
 
 Created a csv file that we will visualize in Excel, Tableau, or my presentation software
 
@@ -130,6 +130,6 @@ Created a csv file that we will visualize in Excel, Tableau, or my presentation 
 
 #COMPLETED
 
-
+I have also added the Rscript for detailed analysis.
 
 

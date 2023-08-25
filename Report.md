@@ -128,8 +128,16 @@ Created a csv file that we will visualize in Excel, Tableau, or my presentation 
 (N.B.: This file location is for a Mac. If you are working on a PC, change the file location accordingly (most likely "C:\Users\YOUR_USERNAME\Desktop\...") to export the data. You can read more here: https://datatofish.com/export-dataframe-to-csv-in-r/)
 
 
-## COMPLETED
+#### COMPLETED
 
 I have also added the Rscript for detailed analysis.
 
+### Supporting visualizations and key findings
 
+![Click here to view](https://ibb.co/dccY1NW)
+
+
+### My top three recommendations based on your analysis
+* Classic bike is popular among members. Offering discounts on classic bikes may be enticing for casual riders to take membership.
+* Casual riders are most active on weekends so marketing events should be organized during weekends to inform them about the potential benefits.
+* Casual riders tend to use their bikes for longer periods than members. By providing discounts for extended rides, we can motivate occasional riders and also encourage our members to ride for longer durations.

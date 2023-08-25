@@ -113,16 +113,14 @@ Compare members and casual users
 
 Calculated the average ride time by each day for members vs casual users
 
-Noticed that the days of the week are out of order. fixed that.
+Noticed that the days of the week are out of order fixed that.
 
 Calculated the average ride time by each day for members vs casual users
 
 Analyzed ridership data by type and weekday
 
-
-There were eenormous no.of rides in above visual
 So i created a visualization for average duration
-
+counting  how many electric, classic, docked bikes used by members and casual riders
 ### STEP 5: EXPORT SUMMARY FILE FOR FURTHER ANALYSIS
 
 Created a csv file that we will visualize in Excel, Tableau, or my presentation software

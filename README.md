@@ -57,70 +57,71 @@ Upload Divvy datasets (csv files) into r.
 
 
 #### STEP 2: WRANGLE DATA AND COMBINE INTO A SINGLE FILE
-Compared column names each of the files.
+1. Compared column names each of the files.
 (While the names don't have to be in the same order, they DO need to match perfectly before we can use a command to join them into one file)
 * By using "col_names()" function.
 
-Inspect the dataframes and look for incongruencies
+2. Inspect the dataframes and look for incongruencies
 
 * By using str()
 
-Stack individual month's data frames into one big data frame (data is from september 2022 to june 2023)
+3. Stack individual month's data frames into one big data frame (data is from september 2022 to june 2023)
 
 * By using "bind_rows()" function
 
-Removed lat, long fields as this data was dropped beginning in 2020
+4. Removed lat, long fields as this data was dropped beginning in 2020
 
 
 #### STEP 3: CLEAN UP AND ADD DATA TO PREPARE FOR ANALYSIS
 
-Inspected the new table that has been created
+1. Inspected the new table that has been created
 * By using colnames() ,nrow(), dim() , head(). Also tail(), str(), summary().
 
-There were  few problems we needed to fix:
+2. There were  few problems we needed to fix:
 * The data can only be aggregated at the ride-level, which is too granular. We will want to add some additional columns of data -- such as day, month, year -- that provide additional opportunities to aggregate the data.
 * We will want to add a calculated field for length of ride data did not have the "tripduration" column. We will add "ride_length" to the entire dataframe for consistency.
 * We will also add day of week column as "days_of_week"
 
 
-Added columns that list the date, month, day, and year of each ride(This will allow us to aggregate ride data for each month, day, or year ... before completing these operations we could only aggregate at the ride level, https://www.statmethods.net/input/dates.html more on date formats in R found at that link)
+3. Added columns that list the date, month, day, and year of each ride(This will allow us to aggregate ride data for each month, day, or year ... before completing these operations we could only aggregate at the ride level, https://www.statmethods.net/input/dates.html more on date formats in R found at that link)
 
 
-Added a "ride_length" calculation to all_trips (in seconds)
+4. Added a "ride_length" calculation to all_trips (in seconds)
 
-Inspect the structure of the columns
+5. Inspect the structure of the columns
 * By using str()
 
-Converted "ride_length" from Character to numeric so we can run calculations on the data
+6. Converted "ride_length" from Character to numeric so we can run calculations on the data
            
 
-Removed "bad" data
+7. Removed "bad" data
 * The dataframe includes a few hundred entries when bikes were taken out of docks and checked for quality by Divvy or ride_length was negative
 * We will create a new version of the dataframe (v2) since data is being removed
 
-This above command led to some NA values so we droped them.
+8. This above command led to some NA values so we droped them.
 
 
 #### STEP 4: CONDUCT DESCRIPTIVE ANALYSIS
 
-Find Descriptive analysis on ride_length (all figures in seconds)
+1. Find Descriptive analysis on ride_length (all figures in seconds)
 
-Condensed the four lines above to one line on the specific attribute
+2. Condensed the four lines above to one line on the specific attribute
 * By using "summary()".
 
-Compare members and casual users
+3. Compare members and casual users
 * By using "aggregate()".
 
-Calculated the average ride time by each day for members vs casual users
+4. Calculated the average ride time by each day for members vs casual users
 
-Noticed that the days of the week are out of order fixed that.
+5. Noticed that the days of the week are out of order fixed that.
 
-Calculated the average ride time by each day for members vs casual users
+6. Calculated the average ride time by each day for members vs casual users
 
-Analyzed ridership data by type and weekday
+7. Analyzed ridership data by type and weekday
 
-So i created a visualization for average duration
-counting  how many electric, classic, docked bikes used by members and casual riders
+8. Created a visualization for average duration
+
+9. Counting  how many electric, classic, docked bikes used by members and casual riders
 #### STEP 5: EXPORT SUMMARY FILE FOR FURTHER ANALYSIS
 
 Created a csv file that we will visualize in Excel, Tableau, or my presentation software

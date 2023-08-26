@@ -138,7 +138,7 @@ I have also added the Rscript for detailed analysis.
 ![Click here to view](https://github.com/piyush0920/Google_Data_Analytics_Capstone_Project/blob/main/Dashboard%201.png)
 
 
-### My top three recommendations based on your analysis
+### My top three recommendations based on my analysis
 * Classic bike is popular among members. Offering discounts on classic bikes may be enticing for casual riders to take membership.
 * Casual riders are most active on weekends so marketing events should be organized during weekends to inform them about the potential benefits.
 * Casual riders tend to use their bikes for longer periods than members. By providing discounts for extended rides, we can motivate occasional riders and also encourage our members to ride for longer durations.
